@@ -17,8 +17,12 @@
               <img class="logo" src="images/logo.svg" width="137" height="56" alt="Логотип магазина Глейси">
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог</a>
+          <li class="navigation-item navigation-catalog">
+            <a class="navigation-link" href="#">Каталог
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
+                <path fill="currentColor" fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+              </svg>
+            </a>
             <ul class="submenu-list">
               <li class="submenu-item">
                 <a class="submenu-link submenu-link-new" href="catalog.html">Новинки</a>
@@ -87,66 +91,11 @@
       <section class="slider">
         <h2 class="visually-hidden">Лучшие предложения.</h2>
 
-        <!-- <div class="slider-wrapper">
-          <ol class="slider-list">
-            <li class="slider-item slider-item-current">
-              <h3 class="slider-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
-              <p class="slider-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это&nbsp;идеальный десерт для всей семьи.</p>
-              <a class="slider-button button" href="#order">Заказать</a>
-            </li>
-            <li class="slider-item">
-              <h3 class="slider-title">Сливочное мороженое со вкусом банана</h3>
-              <p class="slider-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-              <a class="slider-button-order button" href="#order">Заказать</a>
-            </li>
-            <li class="slider-item">
-              <h3 class="slider-title">Карамельный пломбир с маршмеллоу</h3>
-              <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-              <a class="slider-button-order button" href="#order">Заказать</a>
-            </li>
-          </ol>
-
-          <div class="slider-image-container">
-            <div class="slider-button-wrapper">
-              <button class="slider-button slider-prev" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                  <path fill="#2D3440" fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
-                </svg>
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button class="slider-button slider-next" type="button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                  <path fill="#2D3440" fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
-                </svg>
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
-            </div>
-
-            <ol class="slider-list">
-              <li class="slider-item slider-item-current">
-                <div class="slider-img-wrapper">
-                  <img class="slider-img" src="images/slider/slide-1.png" width="329" height="507" alt="Фото пломбира с клубничным джемом.">
-                </div>
-              </li>
-              <li class="slider-item">
-                <div class="slider-img-wrapper">
-                  <img class="slider-img" src="images/slider/slide-2.png" width="312" height="507" alt="Фото сливочного мороженого со вкусом банана.">
-                </div>
-              </li>
-              <li class="slider-item">
-                <div class="slider-img-wrapper">
-                  <img class="slider-img" src="images/slider/slide-3.png" width="350" height="507" alt="Фото карамельного пломбира с маршмеллоу.">
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div> -->
-
         <ol class="slider-list">
           <li class="slider-item slider-item-current">
             <div class="slider-text-container">
               <h3 class="slider-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
-              <p class="slider-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это&nbsp;идеальный десерт для всей семьи.</p>
+              <p class="slider-description">Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом – это&nbsp;идеальный десерт для всей семьи.</p>
               <a class="slider-button-order button" href="#order">Заказать</a>
             </div>
             <div class="slider-image-container">
@@ -156,13 +105,13 @@
               <div class="slider-button-wrapper">
                 <button class="slider-button slider-prev" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                    <path fill="#2D3440" fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
                   </svg>
                   <span class="visually-hidden">Предыдущий слайд.</span>
                 </button>
                 <button class="slider-button slider-next" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
-                    <path fill="#2D3440" fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
                   </svg>
                   <span class="visually-hidden">Следующий слайд.</span>
                 </button>
@@ -177,6 +126,82 @@
               <li class="product-item">
                 <div class="product-image-wrapper">
                   <img class="product-image" src="images/slider/slide-3.png" width="66" height="150" alt="Фото карамельного пломбира с маршмеллоу.">
+                </div>
+              </li>
+            </ol>
+          </li>
+          <li class="slider-item">
+            <div class="slider-text-container">
+              <h3 class="slider-title">Сливочное мороженое со вкусом банана</h3>
+              <p class="slider-description">Сливочное мороженое с ярким банановым <br>вкусом подарит вам свежесть и наслаждение <br>даже в самый жаркий летний день.</p>
+              <a class="slider-button-order button" href="#order">Заказать</a>
+            </div>
+            <div class="slider-image-container">
+              <div class="slider-image-wrapper">
+                <img class="slider-image" src="images/slider/slide-2.png" width="312" height="507" alt="Фото сливочного мороженого со вкусом банана.">
+              </div>
+              <div class="slider-button-wrapper">
+                <button class="slider-button slider-prev" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button class="slider-button slider-next" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="visually-hidden">Следующий слайд.</span>
+                </button>
+              </div>
+            </div>
+            <ol class="product-list">
+              <li class="product-item">
+                <div class="product-image-wrapper">
+                  <img class="product-image" src="images/slider/slide-3.png" width="66" height="150" alt="Фото карамельного пломбира с маршмеллоу.">
+                </div>
+              </li>
+              <li class="product-item">
+                <div class="product-image-wrapper">
+                  <img class="product-image" src="images/slider/slide-1.png" width="66" height="150" alt="Фото пломбира с клубничным джемом.">
+                </div>
+              </li>
+            </ol>
+          </li>
+          <li class="slider-item">
+            <div class="slider-text-container">
+              <h3 class="slider-title">Карамельный пломбир с&nbsp;маршмеллоу</h3>
+              <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет <br>сердца сладкоежек всех возрастов.</p>
+              <a class="slider-button-order button" href="#order">Заказать</a>
+            </div>
+            <div class="slider-image-container">
+              <div class="slider-image-wrapper">
+                <img class="slider-image" src="images/slider/slide-3.png" width="350" height="507" alt="Фото карамельного пломбира с маршмеллоу.">
+              </div>
+              <div class="slider-button-wrapper">
+                <button class="slider-button slider-prev" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button class="slider-button slider-next" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="visually-hidden">Следующий слайд.</span>
+                </button>
+              </div>
+            </div>
+            <ol class="product-list">
+              <li class="product-item">
+                <div class="product-image-wrapper">
+                  <img class="product-image" src="images/slider/slide-1.png" width="66" height="150" alt="Фото пломбира с клубничным джемом.">
+                </div>
+              </li>
+              <li class="product-item">
+                <div class="product-image-wrapper">
+                  <img class="product-image" src="images/slider/slide-2.png" width="66" height="150" alt="Фото сливочного мороженого со вкусом банана.">
                 </div>
               </li>
             </ol>
@@ -202,7 +227,7 @@
             </li>
           </ol>
 
-          <ul class="social-list">
+          <ul class="social-list social-list-slider">
             <li class="social-item">
               <a class="social-link social-telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм.</span>
@@ -249,13 +274,13 @@
                 <img class="product-img" src="images/catalog/product-1.png" width="168" height="168" alt="Фотография мороженого">
               </div>
               <h3 class="product-subtitle">Малинка</h3>
-              <p class="product-description">Сливочное мороженое с&nbsp;малиновым джемом</p>
             </a>
+            <p class="product-description">Сливочное мороженое с&nbsp;малиновым джемом</p>
             <div class="product-price-wrapper">
               <span class="product-price">310 ₽/кг</span>
-              <button class="product-button" type="button">
+              <a class="product-button" href="#">
                 <span class="visually-hidden">Добавить в корзину.</span>
-              </button>
+              </a>
             </div>
           </li>
           <li class="product-card">
@@ -264,13 +289,13 @@
                 <img class="product-img" src="images/catalog/product-2.png" width="168" height="168" alt="Фотография мороженого">
               </div>
               <h3 class="product-subtitle">Фисташка</h3>
-              <p class="product-description">Фисташковый пломбир с&nbsp;кусочками шоколада</p>
             </a>
+            <p class="product-description">Фисташковый пломбир с&nbsp;кусочками шоколада</p>
             <div class="product-price-wrapper">
               <span class="product-price">340 ₽/кг</span>
-              <button class="product-button" type="button">
+              <a class="product-button" href="#">
                 <span class="visually-hidden">Добавить в корзину.</span>
-              </button>
+              </a>
             </div>
           </li>
           <li class="product-card">
@@ -279,13 +304,13 @@
                 <img class="product-img" src="images/catalog/product-3.png" width="168" height="168" alt="Фотография мороженого">
               </div>
               <h3 class="product-subtitle">Черника</h3>
-              <p class="product-description">Крем-брюле с&nbsp;черничным джемом</p>
             </a>
+            <p class="product-description">Крем-брюле с&nbsp;черничным джемом</p>
             <div class="product-price-wrapper">
               <span class="product-price">330 ₽/кг</span>
-              <button class="product-button" type="button">
+              <a class="product-button" href="#">
                 <span class="visually-hidden">Добавить в корзину.</span>
-              </button>
+              </a>
             </div>
           </li>
           <li class="product-card">
@@ -294,13 +319,13 @@
                 <img class="product-img" src="images/catalog/product-4.png" width="168" height="168" alt="Фотография мороженого">
               </div>
               <h3 class="product-subtitle">Бабл-гам</h3>
-              <p class="product-description">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
             </a>
+            <p class="product-description">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
             <div class="product-price-wrapper">
               <span class="product-price">320 ₽/кг</span>
-              <button class="product-button" type="button">
+              <a class="product-button" href="#">
                 <span class="visually-hidden">Добавить в корзину.</span>
-              </button>
+              </a>
             </div>
           </li>
         </ul>
@@ -353,8 +378,8 @@
               <div class="delivery-form-label">
                 <label class="delivery-form-label" for="date">Дата</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button"></button>
-                  <!-- <span class="tooltip-text" role="tooltip"></span> -->
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-date"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-date">Укажите дату доставки.</span>
                 </span>
               </div>
               <input class="delivery-form-field" type="text" id="date" name="date" placeholder="01.04.2020">
@@ -367,8 +392,8 @@
               <div class="delivery-form-label">
                 <label class="delivery-form-label" for="address">Адрес</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button"></button>
-                  <!-- <span class="tooltip-text" role="tooltip"></span> -->
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-address"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-address">Укажите адрес доставки.</span>
                 </span>
               </div>
               <input class="delivery-form-field" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8">
