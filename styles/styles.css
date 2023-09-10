@@ -177,12 +177,49 @@ body {
   list-style-type: none;
 }
 
+.slider-item {
+  display: none;
+}
+
+.slider-item-current {
+  display: grid;
+  grid-template-columns: 470px min-content auto;
+  align-items: center;
+}
+
+.slider-image-container {
+  position: relative;
+}
+
+.slider-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 352px;
+  padding: 20px;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.slider-button-wrapper {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  justify-content: space-between;
+}
+
 .slider-title {
   margin: 0;
   margin-bottom: 24px;
   font-size: 36px;
   font-weight: 900;
   line-height: 46px;
+  max-width: 470px;
 }
 
 .slider-description {
@@ -197,6 +234,36 @@ body {
   padding: 0;
   list-style-type: none;
   display: flex;
+}
+
+.product-list {
+  margin: 0;
+  margin-left: 37px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  column-gap: 41px;
+  opacity: 0.4;
+}
+
+.product-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 150px;
+}
+
+.product-image {
+  width: auto;
+  height: 100%;
 }
 
 /* Present */
@@ -216,6 +283,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  align-items: start;
 }
 
 .present-item {
@@ -224,8 +292,7 @@ body {
   padding: 36px;
   padding-right: 225px;
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  background-position: right bottom;
 }
 
 .present-raspberry {
@@ -667,7 +734,7 @@ body {
 }
 
 .product-card {
-  min-height: 330px;
+  min-height: 270px;
   margin-top: 50px;
   padding: 0 40px 28px;
   background-color: #fcfcfc;
@@ -711,6 +778,7 @@ body {
 .product-price-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .product-price {
@@ -721,9 +789,15 @@ body {
 
 .product-button {
   padding: 0;
+  width: 32px;
+  height: 32px;
   background-color: #ff2f64;
   color: #fcfcfc;
   border: none;
+  border-radius: 50%;
+  background-image: url("../images/icons/cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-pages {
