@@ -9,7 +9,6 @@
 <body>
   <div class="container">
     <header class="header">
-
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -53,8 +52,8 @@
           <li class="navigation-item">
             <a class="navigation-link navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="navigation-item" role="search">
-            <a class="navigation-link user-search" href="#">
+          <li class="navigation-item user-search" role="search">
+            <a class="navigation-link" href="#">
               <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17">
                   <path fill="currentColor" fill-rule="evenodd" d="M2.663 8.188a4.667 4.667 0 1 1 8.028 3.237.683.683 0 0 0-.123.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z" clip-rule="evenodd"/>
@@ -62,24 +61,102 @@
               </svg>
               <span class="visually-hidden">Поиск.</span>
             </a>
+            <form class="user-search-popover search-form" action="https://echo.htmlacademy.ru/" method="get">
+              <label class="visually-hidden" for="search">Строка поиска.</label>
+              <input class="search-form-field" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+            </form>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link user-login" href="#">
+          <li class="navigation-item user-login">
+            <a class="navigation-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17" aria-hidden="true">
                 <path fill="currentColor" fill-rule="evenodd" d="M9 2.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H9.667a.667.667 0 1 1 0-1.333h2.666A.666.666 0 0 0 13 13.19V3.858a.666.666 0 0 0-.667-.667H9.667A.667.667 0 0 1 9 2.525ZM5.862 4.72c.26-.26.682-.26.943 0l3.329 3.329a.69.69 0 0 1 .129.177.664.664 0 0 1-.13.774l-3.328 3.33a.667.667 0 1 1-.943-.944l2.195-2.195h-6.39a.667.667 0 1 1 0-1.333h6.39L5.862 5.663a.667.667 0 0 1 0-.943Z" clip-rule="evenodd"/>
               </svg>
               <span>Вход</span>
             </a>
+            <div class="user-login-popover sign-in">
+              <div class="sign-in-content">
+                <span class="sign-in-title">Личный кабинет</span>
+                <form class="sign-in-form" action="https://echo.htmlacademy.ru/" method="post" id="sign-in">
+                  <label class="visually-hidden" for="login">Логин-почта.</label>
+                  <input class="sign-in-form-field" type="text" name="login" id="login" placeholder="email@example.com" value="email@example.com" required>
+                  <label class="visually-hidden" for="password">Пароль.</label>
+                  <input class="sign-in-form-field password" type="password" name="password" id="password" placeholder="Введите пароль" value="123456" required>
+                </form>
+                <div class="sign-in-bottom-wrapper">
+                  <button class="sign-in-button button button-dark" type="submit" form="sign-in">Войти</button>
+                  <div class="sign-in-link-wrapper">
+                    <a class="sign-in-link" href="#">Забыли пароль?</a>
+                    <a class="sign-in-link" href="#">Регистрация</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link user-cart" href="#">
+          <li class="navigation-item user-cart">
+            <a class="navigation-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17" aria-hidden="true">
                 <path fill="currentColor" fill-rule="evenodd" d="M1.167 2.108a.667.667 0 0 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.825 1.825 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611l-.473-2.361a.667.667 0 0 0-.654-.536H1.167Zm4.524 8.294-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z" clip-rule="evenodd"/>
               </svg>
+
               <span class="visually-hidden">Корзина.</span>
-              <!-- <span class="user-cart-count empty">Нет товаров</span> -->
+
+              <!-- При переключении класса user-cart-active к одному из спанов - меняется количество товаров в корзине.  -->
+
+              <span class="user-cart-count">Нет товаров</span>
               <span class="user-cart-count user-cart-active">2 товара</span>
             </a>
+
+            <!-- При переключении класса user-cart-active к одному из дивов-поповеров - меняется содержимое поповера (для корзины с товарами и пустой).  -->
+
+            <div class="user-cart-popover user-cart-active cart">
+              <div class="cart-content">
+                <span class="cart-title">Корзина</span>
+
+                <ul class="cart-list">
+                  <li class="cart-item">
+                    <a class="cart-link cart-img-wrapper" href="#">
+                      <img class="cart-img" src="images/catalog/product-1.png" width="46" height="46" alt="Фотография товара: Мороженое малинка.">
+                    </a>
+
+                    <div class="cart-product-info">
+                      <a class="cart-link" href="#">
+                        <p class="cart-product-title">Малинка</p>
+                      </a>
+                      <span class="cart-product-weight">1 кг х 310 ₽</span>
+                    </div>
+
+                    <span class="cart-product-price">310 ₽</span>
+                    <button class="cart-delete-button" type="button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a class="cart-link cart-img-wrapper" href="#">
+                      <img class="cart-img" src="images/catalog/product-4.png" width="46" height="46" alt="Фотография товара: Мороженое Бабл-гам.">
+                    </a>
+
+                    <div class="cart-product-info">
+                      <a class="cart-link" href="#">
+                        <p class="cart-product-title">Бабл-гам</p>
+                      </a>
+                      <span class="cart-product-weight">1,5 кг х 320 ₽</span>
+                    </div>
+
+                    <span class="cart-product-price">480 ₽</span>
+                    <button class="cart-delete-button" type="button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="cart-bottom-wrapper">
+                  <button class="cart-button button button-dark" type="submit">Оформить заказ</button>
+                  <p class="cart-total-price">Итого: 790 ₽</p>
+                </div>
+              </div>
+            </div>
+            <div class="user-cart-popover cart empty">
+              <span class="cart-title cart-title-empty">Ваша корзина пока пуста</span>
+            </div>
           </li>
         </ul>
       </nav>
