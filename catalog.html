@@ -52,7 +52,7 @@
           <li class="navigation-item">
             <a class="navigation-link navigation-phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="navigation-item user-search" role="search">
+          <li class="navigation-item user-search">
             <a class="navigation-link" href="#">
               <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none" viewBox="0 0 16 17">
@@ -61,9 +61,9 @@
               </svg>
               <span class="visually-hidden">Поиск.</span>
             </a>
-            <form class="user-search-popover search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="user-search-popover search-form" action="https://echo.htmlacademy.ru/" method="get" role="search">
               <label class="visually-hidden" for="search">Строка поиска.</label>
-              <input class="search-form-field" type="search" name="search" id="search" placeholder="Поиск по сайту" required>
+              <input class="search-form-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
             </form>
           </li>
           <li class="navigation-item user-login">
@@ -78,9 +78,9 @@
                 <span class="sign-in-title">Личный кабинет</span>
                 <form class="sign-in-form" action="https://echo.htmlacademy.ru/" method="post" id="sign-in">
                   <label class="visually-hidden" for="login">Логин-почта.</label>
-                  <input class="sign-in-form-field" type="text" name="login" id="login" placeholder="email@example.com" value="email@example.com" required>
+                  <input class="sign-in-form-field" type="text" name="login" id="login" placeholder="email@example.com" value="email@example.com">
                   <label class="visually-hidden" for="password">Пароль.</label>
-                  <input class="sign-in-form-field password" type="password" name="password" id="password" placeholder="Введите пароль" value="123456" required>
+                  <input class="sign-in-form-field password" type="password" name="password" id="password" placeholder="Введите пароль" value="123456">
                 </form>
                 <div class="sign-in-bottom-wrapper">
                   <button class="sign-in-button button button-dark" type="submit" form="sign-in">Войти</button>
@@ -102,10 +102,13 @@
 
               <!-- При переключении класса user-cart-active к одному из спанов - меняется количество товаров в корзине.  -->
 
-              <span class="user-cart-count empty">Нет товаров</span>
+              <span class="user-cart-count">Нет товаров</span>
               <span class="user-cart-count user-cart-active">2 товара</span>
             </a>
-            <div class="user-cart-popover cart">
+
+            <!-- При переключении класса user-cart-active к одному из дивов-поповеров - меняется содержимое поповера (для корзины с товарами и пустой).  -->
+
+            <div class="user-cart-popover user-cart-active cart">
               <div class="cart-content">
                 <span class="cart-title">Корзина</span>
 
@@ -129,7 +132,7 @@
                   </li>
                   <li class="cart-item">
                     <a class="cart-link cart-img-wrapper" href="#">
-                      <img class="cart-img" src="images/catalog/product-4.png" width="46" height="46" alt="Фотография товара: Бабл-гам.">
+                      <img class="cart-img" src="images/catalog/product-4.png" width="46" height="46" alt="Фотография товара: Мороженое Бабл-гам.">
                     </a>
 
                     <div class="cart-product-info">
@@ -150,6 +153,9 @@
                   <p class="cart-total-price">Итого: 790 ₽</p>
                 </div>
               </div>
+            </div>
+            <div class="user-cart-popover cart empty">
+              <span class="cart-title cart-title-empty">Ваша корзина пока пуста</span>
             </div>
           </li>
         </ul>
@@ -243,19 +249,7 @@
                   <input class="visually-hidden control-input" type="checkbox" name="chocolate" checked>
                   <span class="control-mark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                      <g clip-path="url(#a)">
-                      <g clip-path="url(#b)">
-                        <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
-                      </g>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                        <clipPath id="b">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                      </defs>
+                      <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
                     </svg>
                   </span>
                   <span class="control-label">шоколадные</span>
@@ -266,19 +260,7 @@
                   <input class="visually-hidden control-input" type="checkbox" name="sugar" checked>
                   <span class="control-mark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                      <g clip-path="url(#a)">
-                      <g clip-path="url(#b)">
-                        <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
-                      </g>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                        <clipPath id="b">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                      </defs>
+                      <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
                     </svg>
                   </span>
                   <span class="control-label">сахарные посыпки</span>
@@ -289,19 +271,7 @@
                   <input class="visually-hidden control-input" type="checkbox" name="fruits">
                   <span class="control-mark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                      <g clip-path="url(#a)">
-                      <g clip-path="url(#b)">
-                        <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
-                      </g>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                        <clipPath id="b">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                      </defs>
+                      <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
                     </svg>
                   </span>
                   <span class="control-label">фрукты</span>
@@ -312,19 +282,7 @@
                   <input class="visually-hidden control-input" type="checkbox" name="syrups">
                   <span class="control-mark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                      <g clip-path="url(#a)">
-                      <g clip-path="url(#b)">
-                        <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
-                      </g>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                        <clipPath id="b">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                      </defs>
+                      <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
                     </svg>
                   </span>
                   <span class="control-label">сиропы</span>
@@ -335,19 +293,7 @@
                   <input class="visually-hidden control-input" type="checkbox" name="jams">
                   <span class="control-mark">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
-                      <g clip-path="url(#a)">
-                      <g clip-path="url(#b)">
-                        <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
-                      </g>
-                      </g>
-                      <defs>
-                        <clipPath id="a">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                        <clipPath id="b">
-                          <path fill="#fff" d="M0 0h16v16H0z"/>
-                        </clipPath>
-                      </defs>
+                      <path fill="currentColor" fill-rule="evenodd" d="M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 0 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.967.917l2.315 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z" clip-rule="evenodd"/>
                     </svg>
                   </span>
                   <span class="control-label">джемы</span>
