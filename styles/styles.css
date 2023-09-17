@@ -776,6 +776,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-bottom: 80px;
+  align-items: start;
 }
 
 .blog {
@@ -912,7 +913,7 @@ body {
   background-image: url("../images/background-delivery.jpg");
   background-repeat: no-repeat;
   background-position: top left;
-  background-size: contain;
+  background-size: cover;
 }
 
 .delivery-text-wrapper {
@@ -1076,8 +1077,8 @@ body {
   min-height: 492px;
   background-image: url("../images/background-contacts.jpg");
   background-repeat: no-repeat;
-  background-position: top left;
-  background-size: contain;
+  background-position: center left;
+  background-size: cover;
   background-color: #e6c3c7;
 }
 
@@ -1627,6 +1628,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px 30px;
+  align-items: start;
 }
 
 .product-card {
