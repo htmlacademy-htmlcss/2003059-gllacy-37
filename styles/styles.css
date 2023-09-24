@@ -1332,6 +1332,12 @@ body {
   border-bottom: 1px solid #2d3440;
 }
 
+.breadcrumbs-link-current:hover,
+.breadcrumbs-link-current:focus,
+.breadcrumbs-link-current:active {
+  opacity: 1;
+}
+
 .catalog-title {
   margin: 0;
   text-align: left;
